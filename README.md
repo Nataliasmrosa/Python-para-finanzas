@@ -1,29 +1,33 @@
 # Python para Finanzas: Análisis y Gestión de Carteras
-Microcredencial universitaria de introducción a Python para finanzas por la Universidad Autonoma de Madrid
+Microcredencial universitaria de introducción a Python para Finanzas, impartida por la Universidad Autónoma de Madrid.
 
-
-Este repositorio contiene el trabajo final del curso **Introducción a Python para Finanzas**, enfocado en el análisis de series temporales de precios de activos, construcción y simulación de carteras de inversión aleatorias, y proyección de su comportamiento futuro mediante simulación Montecarlo.
+Este repositorio contiene el trabajo final del curso **Introducción a Python para Finanzas**, centrado en el análisis de series temporales de precios de activos, construcción de carteras aleatorias y simulación de su comportamiento futuro mediante métodos estadísticos y Monte Carlo.
 
 ## Objetivo
 
-Aplicar los conceptos vistos en clase para analizar una serie temporal de precios de activos, construir carteras de inversión y realizar simulaciones que permitan evaluar su comportamiento futuro.
+Aplicar los conceptos aprendidos en clase para:
+- Analizar series temporales de precios financieros.
+- Construir carteras de inversión aleatorias.
+- Evaluar el riesgo mediante CVaR.
+- Simular el comportamiento futuro de las carteras con Monte Carlo.
 
-## Desarrollo
+## Metodología y Desarrollo
 
-1. **Selección de Activos**
+### 1. Selección de Activos
 
-Con una serie de datos historicos de varios activos se ha creado aleatoriamente grupos de 7 acctivos y se ha asegurado una correlación máxima de 0.6.
+A partir de una base de datos histórica de precios, se generaron aleatoriamente grupos de 7 activos. Se garantizó que la correlación entre ellos no superara un umbral de 0.6 para asegurar diversificación.
 
-2. **Construcción de Carteras Aleatorias**
+### 2. Construcción de Carteras Aleatorias
 
-Con los activos seleccionados, se han creado 10 carteras aleatorias cuyos pesos sumen 1 y se muestran los pesos de cada cartera creada.
+Con los activos seleccionados se construyeron 10 carteras aleatorias, asegurando que los pesos asignados a cada activo sumaran 1. Se presentan los pesos de cada cartera como parte del análisis.
 
-3. **Simulación del Comportamiento de las Carteras**
+### 3. Evaluación del Riesgo: CVaR
 
-Con estas 10 carteras se han seleccionado 12 meses y se ha simulado su comportamiento con los datos historicos.
-Se calcula el VaR condicional (CVaR) de cada carteras utilizando el método histórico y se ha selecciondo la cartera con menos CVaR.
+Se simuló el comportamiento de cada cartera durante un horizonte de 12 meses utilizando datos históricos.  
+Para cada una se calculó el **CVaR (Conditional Value at Risk)** mediante el método histórico.  
+Se seleccionó la cartera con el menor CVaR, como representación de la opción más robusta ante eventos extremos.
 
-4. **Simulación Montecarlo**
+### 4. Simulación Monte Carlo
 
-Por último, se ha realizado una simulación de Montecarlo para proyectar el comportamineto de la cartera seleccionada durante los próximos 3 meses.
-Se han utilizado 10,000 iteraciones y se presentan resultado como la media, desviación estándar y percentiles. 
+Sobre la cartera seleccionada, se aplicó una simulación de Monte Carlo con 10,000 iteraciones para proyectar su comportamiento durante los próximos 3 meses.  
+Se presentan estadísticas descriptivas de la distribución simulada: media, desviación estándar y percentiles (5%, 50%, 95%).
